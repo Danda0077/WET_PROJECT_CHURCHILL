@@ -6,10 +6,87 @@
 body {
     background-color: #0A1D37;
     color: white;
-  }
-  .bg-yellow-500 {
-    background-color: #F59E0B;
-  }
-  .bg-gray-600 {
-    background-color: #4B5563;
-  }
+}
+.about title{
+  font-size: 100px;
+}
+.Title{
+  display: flex;                   
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 1.5rem;                
+  border-bottom: 1px solid #374151;
+}
+.head{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.first div{
+  display: flex;
+  margin-right: 1.5rem;
+}
+.menu {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+.titlespeak{
+  font-size: 3rem;         
+  font-weight: 800;        
+  margin-bottom: 1rem;
+}
+.mainpage{
+  height: 100vh;                
+  display: flex;                
+  flex-direction: column;       
+  justify-content: center;      
+  align-items: center;          
+  background-image: url(); 
+  background-size: cover;       
+  background-position: center;  
+}
+.signature{
+  font-size: 1.25rem;
+}
+.About{
+  padding: 2rem;          
+  max-width: 56rem;        
+  margin-left: auto;       
+  margin-right: auto;      
+  text-align: center;
+}
+.timeline{
+  font-size: 2.25rem;        
+  font-weight: 600;          
+  text-align: center;        
+  margin-bottom: 3rem; 
+}
+.lastpage{
+  padding: 2rem;            
+  background-color: #2d3748;
+}
+.blog{
+  font-size: 2.25rem;        
+  font-weight: 600;          
+  text-align: center;        
+  margin-bottom: 2rem;
+}
+.distribution{
+    display: grid;                      
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1.5rem;
+}
+.box{
+  border: 1px solid #ccc;        
+  padding: 1rem;                  
+  border-radius: 0.5rem;          
+  transition: all 0.3s ease;      
+}
+.box2{
+  font-size: 1.5rem;      
+  font-weight: bold;      
+  margin-bottom: 0.5rem;
+}
+.text{
+  color: #cbd5e0;
+}

@@ -5,38 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Churchill Legacy</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
 </head>
 <body class="font-sans">
 
-  <!-- Header -->
-  <header class="flex justify-between items-center p-6 border-b border-gray-700">
-    <h1 class="text-2xl font-bold">Winston Churchill</h1>
-    <nav class="space-x-6">
-      <a href="#about" class="hover:underline">O Winstonovi</a>
-      <a href="#timeline" class="hover:underline">Časová osa</a>
-      <a href="#gallery" class="hover:underline">Galerie</a>
-      <a href="#blog" class="hover:underline">Blog</a>
-    </nav>
+  <header class="Title">
+    <h1 class="head">Winston Churchill</h1>
+    <div class="first div">
+      <a href="#about" class="menu">O Winstonovi</a>
+      <a href="#timeline" class="menu">Časová osa</a>
+      <a href="#gallery" class="menu">Galerie</a>
+      <a href="#blog" class="menu">Blog</a>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center bg-cover bg-center" style="background-image: 0317;">
-    <h2 class="text-5xl font-extrabold mb-4">"Nikdy se nevzdávej."</h2>
-    <p class="text-xl">- podpis Winston Churchill</p>
+  <section class="mainpage">
+    <h2 class="titlespeak">"Nikdy se nevzdávej."</h2>
+    <p class="signature">- podpis Winston Churchill</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="p-8 max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-semibold mb-6">O Winstonovi Churchillovi</h2>
-    <p class="text-gray-300">Sir Winston Churchill byl britský státník, voják a spisovatel, který se stal ikonickým premiérem během druhé světové války.</p>
+  <section id="about" class="About">
+    <h2 class="about title">O Winstonovi Churchillovi</h2>
+    <p class="about him">Sir Winston Churchill byl britský státník, voják a spisovatel, který se stal ikonickým premiérem během druhé světové války.</p>
   </section>
 
  
-  <!-- Timeline Section -->
 <section id="timeline" class="py-16 px-4 bg-[#0F263F]">
-  <h2 class="text-4xl font-semibold text-center mb-12">Časová osa</h2>
+  <h2 class="timeline">Časová osa</h2>
   <div class="overflow-x-auto">
     <div class="flex space-x-12 items-start justify-start min-w-max px-4 pb-4 border-b border-gray-700">
 
@@ -68,8 +62,6 @@
   </div>
 </section>
 
-
-  <!-- Gallery Section -->
   <section id="gallery" class="p-8">
     <h2 class="text-4xl font-semibold text-center mb-8">Galerie</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -80,21 +72,20 @@
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="p-8 bg-gray-800">
-    <h2 class="text-4xl font-semibold text-center mb-8">Blog</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="border p-4 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-bold mb-2">Churchillovy projevy</h3>
-        <p class="text-gray-400">Výběr nejslavnějších projevů s analýzou.</p>
+  <section id="blog" class="lastpage">
+    <h2 class="blog">Blog</h2>
+    <div class="distribution">
+      <div class="box">
+        <h3 class="box2">Churchillovy projevy</h3>
+        <p class="text">Výběr nejslavnějších projevů s analýzou.</p>
       </div>
-      <div class="border p-4 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-bold mb-2">Cesty a mise</h3>
-        <p class="text-gray-400">Popis Churchillových zahraničních cest.</p>
+      <div class="box">
+        <h3 class="box2">Cesty a mise</h3>
+        <p class="text">Popis Churchillových zahraničních cest.</p>
       </div>
-      <div class="border p-4 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-bold mb-2">Soukromý život</h3>
-        <p class="text-gray-400">Životopisné střípky mimo politiku.</p>
+      <div class="box">
+        <h3 class="box2">Soukromý život</h3>
+        <p class="text">Životopisné střípky mimo politiku.</p>
       </div>
     </div>
   </section>
