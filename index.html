@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churchill Legacy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 border-b border-gray-700">
+    <h1 class="text-2xl font-bold">Winston Churchill</h1>
+    <nav class="space-x-6">
+      <a href="#about" class="hover:underline">O Winstonovi</a>
+      <a href="#timeline" class="hover:underline">Časová osa</a>
+      <a href="#gallery" class="hover:underline">Galerie</a>
+      <a href="#blog" class="hover:underline">Blog</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center bg-cover bg-center" style="background-image: 0317;">
+    <h2 class="text-5xl font-extrabold mb-4">"Nikdy se nevzdávej."</h2>
+    <p class="text-xl">- podpis Winston Churchill</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="p-8 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-semibold mb-6">O Winstonovi Churchillovi</h2>
+    <p class="text-gray-300">Sir Winston Churchill byl britský státník, voják a spisovatel, který se stal ikonickým premiérem během druhé světové války.</p>
+  </section>
+
+ 
+  <!-- Timeline Section -->
+<section id="timeline" class="py-16 px-4 bg-[#0F263F]">
+  <h2 class="text-4xl font-semibold text-center mb-12">Časová osa</h2>
+  <div class="overflow-x-auto">
+    <div class="flex space-x-12 items-start justify-start min-w-max px-4 pb-4 border-b border-gray-700">
+
+      <div class="flex flex-col items-center text-center w-48">
+        <div class="bg-yellow-500 text-black rounded-full w-10 h-10 flex items-center justify-center font-bold">1874</div>
+        <h3 class="text-xl font-semibold mt-4">Narození</h3>
+        <p class="text-gray-400 text-sm mt-2">Narodil se v Blenheimském paláci.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center w-48">
+        <div class="bg-yellow-500 text-black rounded-full w-10 h-10 flex items-center justify-center font-bold">1899</div>
+        <h3 class="text-xl font-semibold mt-4">Válka v Búrsku</h3>
+        <p class="text-gray-400 text-sm mt-2">Zajetí a útěk během války v Jižní Africe.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center w-48">
+        <div class="bg-yellow-500 text-black rounded-full w-10 h-10 flex items-center justify-center font-bold">1940</div>
+        <h3 class="text-xl font-semibold mt-4">Premiér</h3>
+        <p class="text-gray-400 text-sm mt-2">Jmenován premiérem během 2. světové války.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center w-48">
+        <div class="bg-yellow-500 text-black rounded-full w-10 h-10 flex items-center justify-center font-bold">1965</div>
+        <h3 class="text-xl font-semibold mt-4">Úmrtí</h3>
+        <p class="text-gray-400 text-sm mt-2">Zemřel ve věku 90 let.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="p-8">
+    <h2 class="text-4xl font-semibold text-center mb-8">Galerie</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-gray-600 h-40"><img src="03177818.jpeg" alt=""></div>
+      <div class="bg-gray-600 h-40"><img src="NzdjODg1MmM5MmYxOWJiYeV6OxO7gUhlOL1FeAJoviyZNwjEpvRUd4Cc-I2mYTKz7obTfpWDqrDKNFjgEHT5oJHb3ze_KGyGvb4hPBeiXjerv2f017zRAR7tH1vUu2Es9p0rdNoYH4PEZHSp9wEWca_NsLrCYIoyN2eD573tY1h4qtEF3qPnugUWUtwL8BaOYMV4PnkHB_x2vn5heyxANg.jpg.webp" alt=""></div>
+      <div class="bg-gray-600 h-40"><img src="" alt=""></div>
+      <div class="bg-gray-600 h-40"><img src="" alt=""></div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="p-8 bg-gray-800">
+    <h2 class="text-4xl font-semibold text-center mb-8">Blog</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border p-4 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold mb-2">Churchillovy projevy</h3>
+        <p class="text-gray-400">Výběr nejslavnějších projevů s analýzou.</p>
+      </div>
+      <div class="border p-4 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold mb-2">Cesty a mise</h3>
+        <p class="text-gray-400">Popis Churchillových zahraničních cest.</p>
+      </div>
+      <div class="border p-4 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold mb-2">Soukromý život</h3>
+        <p class="text-gray-400">Životopisné střípky mimo politiku.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

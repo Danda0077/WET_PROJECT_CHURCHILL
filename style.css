@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+    background-color: #0A1D37;
+    color: white;
+  }
+  .bg-yellow-500 {
+    background-color: #F59E0B;
+  }
+  .bg-gray-600 {
+    background-color: #4B5563;
+  }
