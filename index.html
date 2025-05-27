@@ -2,10 +2,11 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <title>Churchill Legacy</title>
   <link rel="stylesheet" href="style.css">
-</head>
+
+</head> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body class="font-sans">
 
   <header class="Title">
@@ -25,7 +26,7 @@
 
   <section id="home" class="mainpage">
     <h2 class="titlespeak">"Nikdy se nevzdávej."</h2>
-    <p class="signature">- podpis Winston Churchill</p>
+    <p class="signature">- Winston Churchill</p>
   </section>
 
   <section id="about" class="About">
@@ -96,7 +97,7 @@
     <div class="third-div">
       <div class="img1">
         <div class="gallery-item">
-          <div class="overlay-text">Winston Churchill a Josef Stalin na konferenci Velké trojky</div>
+          <div class="overlay-text">Winston Churchill zdraví veřejnost zdvižením svého klobouku</div>
         </div>
       </div>
         <div class="img2"><div class="gallery-item">
@@ -113,25 +114,78 @@
       </div>
     </div>
   </section>
+  <!-- BLOG SEKCE S MODÁLY -->
+<section id="blog" class="lastpage">
+  <h2 class="blog">Blog</h2>
+  <div class="distribution">
 
-  <section id="blog" class="lastpage">
-    <h2 class="blog">Blog</h2>
-    <div class="distribution">
-      <div class="box">
-        <h3 class="box2">Churchillovy projevy</h3>
-        <p class="text">Výběr nejslavnějších projevů s analýzou.</p>
+    <!-- BOX 1 -->
+    <div class="box" data-modal="modal1">
+      <h3 class="box2">Churchillovy projevy</h3>
+      <p class="text">Výběr nejslavnějších projevů s analýzou.</p>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="box" data-modal="modal2">
+      <h3 class="box2">Cesty a mise</h3>
+      <p class="text">Popis Churchillových zahraničních cest.</p>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="box" data-modal="modal3">
+      <h3 class="box2">Soukromý život</h3>
+      <p class="text">Životopisné střípky mimo politiku.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODÁLNÍ OKNA -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Slavné projevy Churchilla</h2>
+      <div class="container">
+      <div class="image-box">
+        <div class="image-placeholder">*obrazek</div>
       </div>
-      <div class="box">
-        <h3 class="box2">Cesty a mise</h3>
-        <p class="text">Popis Churchillových zahraničních cest.</p>
-      </div>
-      <div class="box">
-        <h3 class="box2">Soukromý život</h3>
-        <p class="text">Životopisné střípky mimo politiku.</p>
+      <div class="text-box">
+        <p class="window-text">Např. "We shall fight on the beaches" nebo "Their finest hour" – řeči, které pozvedly morálku Britů během války.</p>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Churchillovy diplomatické mise</h2>
+    <div class="container">
+    <div class="image-box">
+      <div class="image-placeholder">*obrazek</div>
+    </div>
+    <div class="text-box">
+       <p class="window-text">Churchill navštívil řadu zemí (USA, Sovětský svaz, Afrika) a vedl klíčová jednání s Rooseveltem a Stalinem.</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Soukromý život Winstona Churchilla</h2>
+    <div class="container">
+    <div class="image-box">
+      <div class="image-placeholder">*obrazek</div>
+    </div>
+    <div class="text-box">
+      <p class="window-text">Churchill byl nejen politik, ale i malíř, spisovatel a otec. Měl pět dětí, miloval zahradničení a maloval pod pseudonymem Charles Morin.</p>
+    </div>
+  </div>
+  </div>
+</div>
+  
   <script>
     document.querySelectorAll('.year').forEach(year => {
       year.addEventListener('mouseenter', () => {
@@ -173,5 +227,34 @@
     });
   });
   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Klik na box => otevře modal
+    document.querySelectorAll(".box").forEach(box => {
+      box.addEventListener("click", () => {
+        const modalId = box.getAttribute("data-modal");
+        const modal = document.getElementById(modalId);
+        if (modal) modal.style.display = "block";
+      });
+    });
+
+    // Zavření přes křížek
+    document.querySelectorAll(".modal .close").forEach(closeBtn => {
+      closeBtn.addEventListener("click", () => {
+        const modal = closeBtn.closest(".modal");
+        if (modal) modal.style.display = "none";
+      });
+    });
+
+    // Zavření kliknutím mimo modal-content
+    window.addEventListener("click", e => {
+      document.querySelectorAll(".modal").forEach(modal => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
