@@ -62,6 +62,7 @@ body {
   background-repeat: no-repeat;     
   background-position: center;
 }
+
 .signature{
   font-size: 35px;
   font-family: "Dancing Script", cursive;
@@ -147,36 +148,33 @@ body {
   justify-content: center;                           
 }
 .img1{
-   background-color: #4b5563; 
   height: 250px;
-  width: 65%;
-  background-image: url(NTRlNzlkOGZjYTgwYWMyZCA1YRKKWWCSexS57J-tee3cIZ5cys61Ykd0cZoCTZfY4PuU2FFVUnyF7oyRhNxSMcaKxhYIOYvR7Zwi9w1kM1BPBGGl1aQ46qiDEwiOlVi6-oXeAd5aldHJEhuJK4hrjLEz_T5uPmQemRQOoZ9RcGFQ00Pd3k5pGMxk6Q0cyQOVxlOr_tT9NBEXXRkdz-nAeQ.jpg.webp);
+  width: 750px;
+  background-image: url(churchill.jpg);
   background-size: contain;         
   background-repeat: no-repeat;     
   background-position: center;
 }
-.img2{
-  background-color: #4b5563; 
+.img2{ 
   height: 250px;
-  width: 65%;
+  width: 750px;
   background-image: url(03177818.jpeg);
   background-size: contain;         
   background-repeat: no-repeat;     
   background-position: center;
 }
 .img3{
-  background-color: #4b5563; 
   height: 250px;
-  width: 65%;
+  width: 750px;
   background-image: url(rodina.jpg); 
   background-size: contain;        
   background-repeat: no-repeat;     
   background-position: center;
+  
 }
 .img4{
-  background-color: #4b5563; 
   height: 250px;
-  width: 65%;
+  width: 750px;
   background-image: url(setkani.jpg); 
   background-size: contain;         
   background-repeat: no-repeat;     
@@ -221,8 +219,8 @@ body {
   background-color: #f59e0b;
   color: #000000;
   border-radius: 9999px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,6 +302,7 @@ nav ul li a i {
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
+  height: 400px;
 }
 .image-box {
   flex: 1;
@@ -311,16 +310,49 @@ nav ul li a i {
   justify-content: center;
   align-items: center;
 }
-.image-placeholder {
-  width: 200px;
-  height: 150px;
+.image-placeholder1 {
   border: 2px solid #000;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  width: 400px;
+  height: 250px;
+  background-image: url(projev.jpg);
+  background-size: contain;         
+  background-repeat: no-repeat;     
+  background-position: center;
 }
+.image-placeholder2 {
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 400px;
+  height: 250px;
+  background-image: url(cesty\ a\ mise2.jpg);
+  background-size: contain;         
+  background-repeat: no-repeat;     
+  background-position: center;
+}
+
+.image-placeholder3 {
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 400px;
+    height: 250px;
+    background-image: url(cesty\ a\ mise.jpg);
+    background-size: contain;         
+    background-repeat: no-repeat;     
+    background-position: center;
+  }
 .text-box {
   flex: 2;
   display: flex;
@@ -336,14 +368,8 @@ nav ul li a i {
     overflow-x: hidden;
     max-width: 100vw;
   }
-  .Title {
-    flex-direction: column;
-    align-items: flex-start;
-  }
   .first-div {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 0;
+    gap: 10px;
   }
   .menu {
     margin-left: 0;
@@ -386,6 +412,18 @@ nav ul li a i {
   .year {
     margin-bottom: 1rem;
   }
+  .image-placeholder1{
+   width: 250px;
+   height: 145px;
+  }
+  .image-placeholder2{
+    width: 215px;
+    height: 170px;
+  }
+  .image-placeholder3{
+    width: 200px;
+    height: 115px;
+  }
 }
 
 .modal {
@@ -404,6 +442,9 @@ nav ul li a i {
   border-radius: 10px;
   position: relative;
   box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  max-width: 900px;
+  width: 90vw;
+  height: 460px;
 }
 .close {
   position: absolute;
