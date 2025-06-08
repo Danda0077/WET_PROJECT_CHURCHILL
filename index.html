@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
- 
-  <title>Churchill Legacy</title>
-  <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<title>Churchill Legacy</title>
+<link rel="stylesheet" href="style.css">
 </head> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body class="font-sans">
 
   <header class="Title">
-    <h1 class="head">Winston Churchill</h1>
+    <h1 class="pulse-animation">Winston Churchill</h1>
     <div class="first-div">
       <a href="#home" class="home-icon">
         <svg width="20" height="20" viewBox="0 0 576 512" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -20,21 +18,26 @@
       <a href="#about" class="menu">O Winstonovi</a>
       <a href="#timeline" class="menu">Časová osa</a>
       <a href="#gallery" class="menu">Galerie</a>
-      <a href="#blog" class="menu">Blog</a>
+      <a href="#zajímavosti" class="menu">Zajímavosti</a>
     </div>
   </header>
 
-  <section id="home" class="mainpage">
+<section id="home" class="mainpage">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="Obrázky/churchills -speech.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay-content">
     <h2 class="titlespeak">"Nikdy se nevzdávej."</h2>
     <p class="signature">- Winston Churchill</p>
-  </section>
+  </div>
+</section>
 
-  <section id="about" class="About">
-    <h2 class="about-title">O Winstonovi Churchillovi</h2>
-    <p class="about-him">Britský premiér během 2. světové války, známý pro své odhodlání, silné projevy a vůdcovství v těžkých časech. Dvakrát byl premiérem (1940 – 1945, 1951 – 1955), získal Nobelovu cenu za literaturu (1953) a napsal mnoho knih. Byl také malířem a významnou postavou 20. století.</p>
-  </section>
+<section id="about" class="About">
+  <h2 class="about-title">O Winstonovi Churchillovi</h2>
+  <p class="about-him" id="about-text"></p>
+</section>
 
- 
 <section id="timeline" class="time">
   <h2 class="timeline">Časová osa</h2>
   <div class="overflow-x-auto">
@@ -87,7 +90,6 @@
         <h3 class="timelaps">Úmrtí</h3>
         <p class="time-text">Zemřel ve věku 90 let, měl státní pohřeb.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -114,29 +116,25 @@
       </div>
     </div>
   </section>
-  <!-- BLOG SEKCE S MODÁLY -->
-<section id="blog" class="lastpage">
-  <h2 class="blog">Blog</h2>
+  <!-- zajímavosti SEKCE S MODÁLY -->
+<section id="zajímavosti" class="lastpage">
+  <h2 class="zajimavosti">Zajímavosti</h2>
   <div class="distribution">
 
-    <!-- BOX 1 -->
     <div class="box" data-modal="modal1">
       <h3 class="box2">Churchillovy projevy</h3>
       <p class="text">Výběr nejslavnějších projevů s analýzou.</p>
     </div>
 
-    <!-- BOX 2 -->
     <div class="box" data-modal="modal2">
       <h3 class="box2">Cesty a mise</h3>
       <p class="text">Popis Churchillových zahraničních cest.</p>
     </div>
 
-    <!-- BOX 3 -->
     <div class="box" data-modal="modal3">
       <h3 class="box2">Soukromý život</h3>
       <p class="text">Životopisné střípky mimo politiku.</p>
     </div>
-
   </div>
 </section>
 
@@ -190,13 +188,40 @@
   </div>
 </div>
   
-  <script>
-    document.querySelectorAll('.year').forEach(year => {
-      year.addEventListener('mouseenter', () => {
-        year.parentElement.classList.add('active');
+ <script>
+  const years = document.querySelectorAll('.year');
+  let activeIndex = -1;
+
+  years.forEach((year, index) => {
+    year.addEventListener('click', () => {
+      activeIndex = index;
+
+      years.forEach((y, i) => {
+        if (i < activeIndex) {
+          y.parentElement.classList.add('active');
+        } else {
+          y.parentElement.classList.remove('active');
+        }
       });
     });
-  </script>
+
+    year.addEventListener('mouseenter', () => {
+      years.forEach((y, i) => {
+        if (i < index) {
+          y.parentElement.classList.add('hover-active');
+        }
+      });
+    });
+
+    year.addEventListener('mouseleave', () => {
+      years.forEach((y, i) => {
+        if (i > activeIndex) {
+          y.parentElement.classList.remove('hover-active');
+        }
+      });
+    });
+  });
+</script>
 
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -260,5 +285,30 @@
   });
 </script>
 
+<script>
+  const text = `Winston Churchill (1874–1965) byl britský státník, premiér během druhé světové války, spisovatel a nositel Nobelovy ceny za literaturu. Proslul silnými projevy, vůdčím postojem proti nacismu a schopností povzbudit národ v těžkých časech. Působil v Konzervativní i Liberální straně, premiérem byl v letech 1940–1945 a 1951–1955. Mimo politiku byl také válečným korespondentem, historikem a malířem. Trpěl depresemi, které nazýval „černý pes“. Jeho život byl plný kontrastů – od aristokratických kořenů až po ikonickou roli obránce svobody během největšího konfliktu 20. století.`;
+
+  const target = document.getElementById('about-text');
+  let index = 0;
+  let animated = false;
+
+  function typeText() {
+    if (index < text.length) {
+      target.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeText, 35); // Rychlost psaní
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    const section = document.getElementById('about');
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight && !animated) {
+      animated = true;
+      typeText();
+    }
+  });
+</script>
 </body>
 </html>
